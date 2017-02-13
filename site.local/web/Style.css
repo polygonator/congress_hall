@@ -1,0 +1,203 @@
+
+
+#f1
+{
+    position : relative;
+    width  : 340px;
+    height : 470px;
+    border-radius : 5px;
+    margin : 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: #e3e3e3;
+    border-top : 1px solid #f1f1f1;
+    box-shadow : 0 0 0 1px #626262 , 0 0 0 6px rgba(150,150,150,.5) , 0 0 0 7px #002124 , 0 0 0 8px #004f4f;
+    text-align : center;
+}
+
+#f2
+{
+    position : relative;
+    width  : 340px;
+    height : 360px;
+    border-radius : 5px;
+    margin : 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: #e3e3e3;
+    border-top : 1px solid #f1f1f1;
+    box-shadow : 0 0 0 1px #626262 , 0 0 0 6px rgba(150,150,150,.5) , 0 0 0 7px #002124 , 0 0 0 8px #004f4f;
+    text-align : center;
+}
+
+#f3
+{
+    position : relative;
+    width  : 340px;
+    height : 270px;
+    border-radius : 5px;
+    margin : 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: #e3e3e3;
+    border-top : 1px solid #f1f1f1;
+    box-shadow : 0 0 0 1px #626262 , 0 0 0 6px rgba(150,150,150,.5) , 0 0 0 7px #002124 , 0 0 0 8px #004f4f;
+    text-align : center;
+}
+
+h6 {
+  margin     : 10px 0 25px 0;
+  font-size  : 42px;
+  color      : #002322;
+  font-family: 'Arial', sans-serif;
+  text-shadow: 1px 1px 0 #888 , 2px 2px 0 #ccc; 
+}
+
+input {
+  display    : block;
+  height     : 48px;
+  margin     : 0 auto 17px;
+  text-align : center;
+  width      : 266px;
+  border-radius : 5px;
+}
+
+.user , .pass, .repeat, .email {
+  font-size      : 20px;
+  background: -moz-radial-gradient(top, #005451, #000d13);
+  background: -webkit-radial-gradient(top, #005451, #000d13);
+  
+  box-shadow: inset 0 0 3px 1px #ccc; 
+  
+  border-top : 1px solid #aaa;
+  border-bottom : 1px solid #eee;
+  
+  color          : #eafffe;
+}
+
+.btn {
+  margin-bottom : 30px;
+  color         : #fefefe;
+  text-shadow   : 0 1px 0 #777;
+  border        : 1px solid #4d4d4d;
+  box-shadow    : inset 0 0 1px 1px #555454;
+  text-transform : uppercase;
+  background: -moz-linear-gradient(top,  #d5d5d5, #606060);
+  background: -webkit-linear-gradient(top,  #d5d5d5, #606060);
+  
+  font-size      : 17px;
+}
+
+.btn:hover {
+  cursor : pointer;
+  background: -moz-linear-gradient(top, #efefef, #a0a0a0);
+  background: -webkit-linear-gradient(top,  #efefef, #a0a0a0);
+}
+
+.user:focus , .pass:focus, .repeat:focus, .email:focus {
+  box-shadow    : inset 0 0 1px 1px #005350;
+  border        : 1px solid #005350;
+  transition    : all .2s ease-in;
+}
+
+hr {
+  height : 1px;
+  width  : 270px;
+  margin : auto;
+}
+
+::-webkit-input-placeholder {
+  color          : #eafffe;
+  font-size      : 17px;
+  text-transform : uppercase;
+}
+
+:-moz-placeholder {  
+  color          : #eafffe;
+  font-size      : 17px;
+  text-transform : uppercase;
+}
+body
+{
+    background: linear-gradient(to top, #000d13, #005451);
+}
+a
+{
+    text-decoration: none;
+}
+
+h1
+{
+    font-family: Arial Regular, Helvetica, sans-serif;
+    font-size: 36px;
+}
+
+h2
+{
+    font-family: Arial Regular, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+h3
+{
+    font-family: Arial Regular, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+h4
+{
+    font-family: Arial Regular, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+h5
+{
+    font-family: Arial Regular, Helvetica, sans-serif;
+    font-size: 8px;
+    color: white;
+}
+
+.style1
+{
+    background: url(img/Element1.png);
+    color: #eafffe;
+}
+
+.style2
+{
+    background: url(img/Element2.png);
+}
+
+.style4
+{
+    background-color: black;
+}
+.formplace
+{
+    margin: auto;
+    width: 960px; 
+    height: 1450px;
+    background: -webkit-radial-gradient(top,  #d5d5d5, #606060);
+    background: -moz-radial-gradient(top,  #d5d5d5, #606060);
+
+}
+
+.buttStyle1
+{
+    margin: auto;
+    width: 360px;
+    height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    border-color: #005451;
+    color: #4a6c6b;
+    cursor: pointer;
+    border-radius: 5px;
+    background: -webkit-radial-gradient(top, #005451, #000d13);
+    transition: 0.2s;
+}
+
+.buttStyle1:hover { background: -webkit-radial-gradient(top, #008b86, #002325);}
+.buttStyle1:active {
+  background: -webkit-radial-gradient(top, #008b86, #002325);
+}
