@@ -62,14 +62,14 @@ class CI_Email {
 	 *
 	 * @var	string
 	 */
-	public $mailpath	= '/usr/sbin/sendmail';	// Sendmail path
-
+	//public $mailpath	= '/usr/sbin/sendmail';	// Sendmail path
+    public $mailpath = 'D:\Programs\OpenServer\OpenServer\domains\site.local\sendmail';
 	/**
 	 * Which method to use for sending e-mails.
 	 *
 	 * @var	string	'mail', 'sendmail' or 'smtp'
 	 */
-	public $protocol	= 'mail';		// mail/sendmail/smtp
+	public $protocol	= 'smpt';		// mail/sendmail/smtp
 
 	/**
 	 * STMP Server host

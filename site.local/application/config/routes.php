@@ -50,7 +50,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'welcome';
-$route['3ds-print.ru'] = 'index.html';
-$route['registration'] = 'Registration/register';
+$route['main'] = 'index/indx';
+$route['about_us'] = 'about_us/ab_us';
+$route['my_account'] = 'my_account/my_acc';
+$route['products'] = 'products/prdcts';
+$route['reset'] = 'reset/res';
+$route['registration'] = 'registration/register';
+$route['authorization'] = 'authorization/authorize';
+$route['product_demo'] = 'product_demo/demo';
+$route['auth_check'] = 'authorization/processing';
+$route['leave_review'] = 'leave_review/l_rev';
+$route['leave_rev_check'] = 'leave_review/submit';
+$route['review'] = 'review/rev';
+$route['pass_check'] = 'my_account/update';
+$route['repass'] = 'my_account/repass';
+$route['cart'] = 'cart/crt';
+
+$route['reg'] = 'registration/reg';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
