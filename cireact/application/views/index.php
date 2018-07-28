@@ -8,6 +8,9 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 	<title>Main page</title>
 </head>
 
+
+<body>
+
 	<h1>HELLO!</h1>
 	<div id="like_button_container"></div>
 
