@@ -24,8 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 
     <style>
-
-
+   		/*so what should be here?*/
 
     </style>
 
