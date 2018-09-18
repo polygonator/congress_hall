@@ -1,0 +1,54 @@
+@import 'app/root.css';
+
+.root {
+	display: flex;
+	margin: * auto;
+	width: 100%;
+	padding: * 20px;
+
+	@media (--BP2-only) {
+		max-width: var(--BP2-max-width);
+	}
+
+	@media (--BP3-only) {
+		max-width: var(--BP3-max-width);
+	}
+
+	@media (--BP4-only) {
+		max-width: var(--BP4-max-width);
+	}
+
+	@media (--BP5-only) {
+		max-width: var(--BP5-max-width);
+	}
+
+	@media (--BP6-min) {
+		max-width: var(--BP6-max-width);
+	}
+}
+
+.wrap {
+	flex-wrap: wrap;
+}
+
+.block {
+	display: block;
+}
+
+.column {
+	flex-direction: column;
+}
+
+.justifyContentCenter {
+	justify-content: center;
+}
+
+.alignItemsCenter {
+	align-items: center;
+}
+
+.noDefaultPaddings {
+	.root& {
+		padding: * 0;
+	}
+}

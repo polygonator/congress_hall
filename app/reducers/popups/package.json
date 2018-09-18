@@ -1,0 +1,6 @@
+{
+  "name": "popups",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./popups.js"
+}

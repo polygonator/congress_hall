@@ -1,0 +1,51 @@
+@import 'app/root.css';
+
+.overlay {
+	size: 100%;
+	z-index: 9999;
+	overflow: hidden;
+	position: fixed 0 * * 0;
+	background-color: color(var(--mainColor) alpha(60%));
+}
+
+.wrapper {
+	overflow-y: auto;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+	display: flex;
+	justify-content: center;
+}
+
+.popup {
+	position: relative;
+	width: 100%;
+	margin: 0 20px;
+	@media (--BP2-min) {
+		width: auto;
+		margin: 0;
+	}
+}
+
+.inheritHeight {
+	height: 100%;
+}
+
+.inheritWidth {
+	width: 100%;
+}
+
+.close {
+	position: absolute 25px 25px * *;
+	cursor: pointer;
+	touch-action: manipulation;
+	size: 40px;
+	background-image: url('app/shared/svg/deleteCross.svg');
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	@media (--BP1-max) {
+		top: 24px;
+		right: 4px;
+		background-size: 10px;
+	}
+}

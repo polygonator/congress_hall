@@ -1,0 +1,6 @@
+<div class="legacy-browsers">
+	<p class="legacy-browsers__title">К сожалению, браузер, которым вы пользуйтесь, устарел и не позволяет корректно отображать сайт. Пожалуйста, установите любой из современных браузеров, например:</p>
+	<a class="legacy-browsers__link" href="https://www.google.ru/chrome/browser/desktop/">Google Chrome</a>
+	<a class="legacy-browsers__link" href="https://www.mozilla.org/ru/firefox/new/">Firefox</a>
+	<a class="legacy-browsers__link" href="https://www.apple.com/safari">Safari</a>
+</div>

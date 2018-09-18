@@ -1,0 +1,10 @@
+/* example font connection */
+@font-face {
+	font-family: 'brankovic';
+	src: url('fonts/brankovic.ttf') format('truetype');
+	/*src: url('fonts/brankovic.woff2') format('woff2'),*/
+	/*url('fonts/brankovic.woff') format('woff'),*/
+	/*url('fonts/brankovic.ttf') format('truetype');*/
+	font-weight: normal;
+	font-style: normal;
+}

@@ -1,0 +1,16 @@
+<!--
+meta(name="msapplication-TileImage" content="/public/fav_144.png")
+link(rel="apple-touch-icon" sizes="57x57" href="/public/fav_57.png")
+link(rel="apple-touch-icon" sizes="60x60" href="/public/fav_60.png")
+link(rel="apple-touch-icon" sizes="72x72" href="/public/fav_72.png")
+link(rel="apple-touch-icon" sizes="76x76" href="/public/fav_76.png")
+link(rel="apple-touch-icon" sizes="114x114" href="/public/fav_114.png")
+link(rel="apple-touch-icon" sizes="120x120" href="/public/fav_120.png")
+link(rel="apple-touch-icon" sizes="144x144" href="/public/fav_144.png")
+link(rel="apple-touch-icon" sizes="152x152" href="/public/fav_152.png")
+link(rel="apple-touch-icon" sizes="180x180" href="/public/fav_180.png")
+link(rel="icon" type="image/png" sizes="192x192" href="/public/fav_192.png")
+link(rel="icon" type="image/png" sizes="32x32" href="/public/fav_32.png")
+link(rel="icon" type="image/png" sizes="96x96" href="/public/fav_96.png")
+link(rel="icon" type="image/png" sizes="16x16" href="/public/fav_16.png")
+-->

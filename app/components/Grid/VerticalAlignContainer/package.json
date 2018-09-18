@@ -1,0 +1,6 @@
+{
+  "name": "VerticalAlignContainer",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./VerticalAlignContainer.js"
+}

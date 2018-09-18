@@ -1,0 +1,116 @@
+@import 'normalize.css';
+@import 'app/root.css';
+
+html,
+body {
+	box-sizing: border-box;
+	size: 100%;
+	font-family: var(--sansSerif);
+	min-width: var(--minWidth);
+	margin: 0;
+}
+
+button, input, optgroup, select, textarea {
+	font-family: var(--sansSerif);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-overflow-scrolling: touch;
+}
+
+:global .app-root {
+	height: 100%;
+}
+
+figure {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	outline: 0;
+}
+
+img {
+	vertical-align: top;
+}
+
+button {
+	background-color: transparent;
+	border-radius: 0;
+	border: 0;
+	box-shadow: none;
+	outline: 0;
+	padding: 0;
+	display: block;
+	cursor: inherit;
+	touch-action: manipulation;
+	appearance: none;
+	-webkit-appearance: none;
+}
+
+button[type=button] {
+	appearance: none;
+	-webkit-appearance: none;
+}
+
+input {
+	display: block;
+	outline: 0;
+	box-shadow: none;
+	border: 0;
+	background-color: transparent;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+main {
+	display: block;  /* fix for ie11 */
+	width: 100%;
+}
+
+.root {
+	height: 100%;
+}
+
+/**
+ * Legacy stuff
+ */
+:global {
+.legacy-browsers {
+	display: none;
+	text-align: center;
+	position: absolute 50% * * 50%;
+	text: 900 center 30px 30px;
+	size: 600px 350px;
+	margin: -calc(350px / 2) * * -calc(600px / 2);
+}
+
+.legacy-browsers__title {
+	margin-bottom: 50px;
+}
+
+.legacy-browsers__link {
+	display: block;
+	color: var(--mainColor);
+}
+
+.no-flexbox.no-flexboxlegacy.no-flexboxtweener {
+.legacy-browsers {
+	display: block;
+}
+.app-root {
+	display: none;
+}
+}
+}

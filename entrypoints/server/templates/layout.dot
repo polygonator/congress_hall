@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="[[= layout.lang ]]" itemscope="itemscope" itemtype="http://schema.org/WebSite">
+	<head>
+		[[= partial('fragments/meta.dot') ]]
+		[[= partial('fragments/icons.dot') ]]
+		[[? model.appAssets && model.appAssets.css ]]
+			<link rel="stylesheet" type="text/css" href="[[= model.appAssets.css]]"/>
+		[[?]]
+		[[= partial('fragments/vendorJS.dot') ]]
+		[[= partial('fragments/polyfills.dot') ]]
+		<meta name="state" content="[[= layout.state ]]" />
+	</head>
+	<body>
+		<div id="app-root" class="app-root">[[= layout.body ]]</div>
+		[[? model.appAssets && model.appAssets.js ]]
+			<script type="text/javascript" src="[[= model.appAssets.js]]" [[? model.isProduction ]]async="async"[[?]]></script>
+		[[?]]
+		[[? !layout.error ]]
+			[[= partial('fragments/legacyBrowsers.dot') ]]
+		[[?]]
+		[[? layout.trackingId ]]
+			[[= partial('fragments/ga.dot') ]]
+		[[?]]
+	</body>
+</html>

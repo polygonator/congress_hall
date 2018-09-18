@@ -1,0 +1,47 @@
+:root {
+	--sansSerif: sans-serif;
+	--mainColor: #000000;
+	--minWidth: 320px;
+
+	/* section to define grid variables */
+
+	/* predefined some maxWidthes for all BPs */
+	/* need to check and correct for each projects */
+	--BP2-max-width: 700px;
+	--BP3-max-width: 940px;
+	--BP4-max-width: 1115px;
+	--BP5-max-width: 1160px;
+	--BP6-max-width: 1596px;
+	/* section to define color variables */
+}
+
+
+/* section to define media variables */
+
+/* predefined some BPs */
+/* need to check and correct BPs for each projects */
+@custom-media --BP1-only screen and (max-width: 767px);
+@custom-media --BP1-max screen and (max-width: 767px);
+
+/*tablet bps*/
+@custom-media --BP2-min screen and (min-width: 768px);
+@custom-media --BP2-max screen and (max-width: 1023px);
+@custom-media --BP2-only screen and (max-width: 1023px) and (min-width: 768px);
+
+@custom-media --BP3-min screen and (min-width: 1024px);
+@custom-media --BP3-max screen and (max-width: 1279px);
+@custom-media --BP3-only screen and (max-width: 1279px) and (min-width: 1024px);
+
+@custom-media --tablet-only screen and (min-width: 768px) and (max-width: 1279px);
+
+/*desktop bps*/
+@custom-media --BP4-min screen and (min-width: 1280px);
+@custom-media --BP4-max screen and (max-width: 1439px);
+@custom-media --BP4-only screen and (max-width: 1439px) and (min-width: 1280px);
+
+@custom-media --BP5-min screen and (min-width: 1440px);
+@custom-media --BP5-max screen and (max-width: 1919px);
+@custom-media --BP5-only screen and (max-width: 1919px) and (min-width: 1440px);
+
+@custom-media --BP6-only screen and (min-width: 1920px); /* for for-loops postcss plugin */
+@custom-media --BP6-min screen and (min-width: 1920px);

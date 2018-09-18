@@ -1,0 +1,18 @@
+---
+layout: layout.dot
+---
+
+[[##url:[[= model.domain_name]][[= model.url || '']]#]]
+[[##title:[[= model.seo && model.seo.title || '']]#]]
+[[##keywords:[[= model.seo && model.seo.keywords || '']]#]]
+[[##description:[[= model.seo && model.seo.description || '']]#]]
+[[##picture:[[= model.seo && model.seo.image || '']]#]]
+[[##twitterAuthor:[[= model.seo && model.seo.twitterAuthor || '']]#]]
+[[##themeColor:[[= model.seo && model.seo.themeColor || '#ffffff']]#]]
+[[##sitename:[[= model.seo && model.seo.sitename || model.sitename]]#]]
+[[##locale:[[= model.lang || 'ru']]#]]
+[[##lang:[[= model.lang || 'ru']]#]]
+[[##state:[[= model.state || '']]#]]
+[[##body:[[= model.body || '']]#]]
+[[##trackingId:[[= model.trackingId || '']]#]]
+[[##error: true #]]

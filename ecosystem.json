@@ -1,0 +1,22 @@
+{
+  "apps": [{
+    "name": "react-bootstrap-dev",
+    "script": "index.js",
+    "env": {
+      "NODE_ENV": "development",
+      "NODE_PORT": 3000,
+      "NODE_PATH": process.env.PWD + ':' + process.env.PWD + '/app:' + process.env.PWD + '/app/components:'
+    },
+    "watch": true,
+    "ignore_watch": ["node_modules", "node_modules/.cache/@babel/register/*", "public", ".git", ".idea", "webpack", "entrypoints/client", "*.css"]
+  }, {
+    "name": "react-bootstrap",
+    "script": "build/server/server.js",
+    "env": {
+      "NODE_ENV": "production",
+      "NODE_PORT": 3000,
+      "NODE_PATH": process.env.PWD + ':' + process.env.PWD + '/app:' + process.env.PWD + '/app/components:'
+    },
+    "watch": false
+  }]
+}

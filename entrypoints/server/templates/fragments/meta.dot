@@ -1,0 +1,28 @@
+<title>[[= layout.title ]]</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="theme-color" content="[[= layout.themeColor ]]" />
+<meta name="robots" content="index,follow" />
+<meta name="keywords" content="[[= layout.keywords ]]" />
+<meta name="description" content="[[= layout.description ]]" />
+
+<meta itemprop="name" content="[[= layout.title ]]" />
+<meta itemprop="description" content="[[= layout.description ]]" />
+<meta itemprop="image" content="[[= layout.picture ]]" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="[[= layout.twitterAuthor ]]" />
+<meta name="twitter:creator" content="[[= layout.twitterAuthor ]]" />
+<meta name="twitter:title" content="[[= layout.title ]]" />
+<meta name="twitter:description" content="[[= layout.description ]]" />
+<meta name="twitter:image" content="[[= layout.picture ]]" />
+
+<meta property="og:title" content="[[= layout.title ]]" />
+<meta property="og:image" content="[[= layout.picture ]]" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="[[= layout.url ]]" />
+<meta property="og:description" content="[[= layout.description ]]" />
+<meta property="og:site_name" content="[[= layout.sitename ]]" />
+<meta property="og:locale" content="[[= layout.locale ]]" />
+<meta name="msapplication-TileColor" content="[[= layout.themeColor ]]" />

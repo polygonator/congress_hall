@@ -1,0 +1,6 @@
+{
+  "name": "match",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./match.js"
+}

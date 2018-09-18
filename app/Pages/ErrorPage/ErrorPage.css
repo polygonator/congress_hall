@@ -1,0 +1,26 @@
+@import 'app/root.css';
+
+.root {
+	.pure_page& {
+		height: 100%;
+		padding: 0;
+	}
+}
+
+.contentContainer {
+	flex: 1;
+	margin: 0 auto;
+}
+
+.code {
+	position: relative;
+	text: var(--mainColor) 900 center 600px 538px;
+	margin: 0;
+}
+
+.message {
+	width: 100%;
+	display: block;
+	margin: 0 0 10px;
+	text: 400 center 42px 42px;
+}
