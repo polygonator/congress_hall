@@ -18,7 +18,5 @@ public/modernizr.js
 
 # Webstorm
 .idea/
-.env
-.env.sample
 build/
 package-lock.json
