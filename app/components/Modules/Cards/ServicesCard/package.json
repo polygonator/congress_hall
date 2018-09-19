@@ -1,0 +1,6 @@
+{
+  "name": "ServicesCard",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./ServicesCard.js"
+}

@@ -1,18 +1,48 @@
 :root {
+	/*Fonts*/
 	--sansSerif: sans-serif;
-	--mainColor: #000000;
-	--minWidth: 320px;
+	--openSans: 'OpenSans', sans-serif;
+	--notoSans: 'NotoSans', sans-serif;
 
 	/* section to define grid variables */
 
 	/* predefined some maxWidthes for all BPs */
 	/* need to check and correct for each projects */
+
+	--minWidth: 320px;
+
+	/*container width*/
+
 	--BP2-max-width: 700px;
 	--BP3-max-width: 940px;
 	--BP4-max-width: 1115px;
 	--BP5-max-width: 1160px;
-	--BP6-max-width: 1596px;
+	--BP6-max-width: 1160px;
 	/* section to define color variables */
+
+	/*UI colors*/
+	--black: #000000;
+	--white: #ffffff;
+	--gold: #c69c6d;
+	--dark-gray: #474747;
+	--gray: #666666;
+	--light-gray: #b1b1b1;
+	--jumbo: #717073;
+	--silver: #dbdbdb;
+	--shadyLady: #cbcbcb;
+	--silver2: #858585;
+
+	/*texts*/
+	--openSans-title12: 400 12px 20px;
+	--openSans-title14: 400 14px 29px 0.02em;
+	--openSans-title16: 400 16px 20px ;
+	--openSans-title21: 300 21px 29px 0.02em ;
+	--openSans-title42: 300 42px normal 0.02em;
+	--openSans-title60: 300 60px 60px 0.02em;
+	--opensSans-title16_bold: 700 16px 29px 0.02em;
+	--openSans-title16_29: 400 16px 29px 0.02em;
+
+	--notoSans-title16: 700 16px 20px ;
 }
 
 

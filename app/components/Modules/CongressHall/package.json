@@ -1,0 +1,6 @@
+{
+  "name": "CongressHall",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./CongressHall.js"
+}

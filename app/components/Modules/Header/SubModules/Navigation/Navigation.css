@@ -1,0 +1,25 @@
+@import 'app/root.css';
+
+.root{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.nav_left{
+	padding-top: 42px;
+	a{
+		margin-right: 138px;
+	}
+}
+.nav_right{
+	padding-top: 42px;
+	a{
+		margin-left: 170px;
+	}
+
+}
+.nav_item{
+	text: var(--openSans-title16) var(--white);
+	text-transform: uppercase;
+	text-decoration: none;
+}

@@ -4,6 +4,8 @@ import {provideHooks} from 'redial';
 import {connect} from 'react-redux';
 import Helmet from 'react-helmet';
 import styles from './Layout.css';
+import Header from 'Modules/Header';
+import Footer from 'Modules/Footer';
 import {actions as commonActions} from 'reducers/common';
 import {actions as settingsActions} from 'reducers/settings';
 
@@ -50,7 +52,9 @@ class Layout extends Component {
 				<Helmet titleTemplate="%s">
 					<title>{title}</title>
 				</Helmet>
+				<Header/>
 				{children}
+				<Footer/>
 			</div>
 		);
 	}

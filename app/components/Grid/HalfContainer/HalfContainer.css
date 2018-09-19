@@ -1,0 +1,41 @@
+@import 'app/root.css';
+
+.root {
+	display: flex;
+	width: 50%;
+	max-width: 50%;
+	flex: 0 0 50%;
+}
+
+.pureHalf {
+	width: 50%;
+	max-width: 50%;
+	flex: 0 0 50%;
+	@for $i from 2 to 6 {
+		@media (--BP$(i)-only) {
+			width: 50%;
+			max-width: 50%;
+			flex: 0 0 50%;
+		}
+	}
+}
+
+.wrap {
+	flex-wrap: wrap;
+}
+
+.block {
+	display: block;
+}
+
+.column {
+	flex-direction: column;
+}
+
+.justifyContentCenter {
+	justify-content: center;
+}
+
+.alignItemsCenter {
+	align-items: center;
+}

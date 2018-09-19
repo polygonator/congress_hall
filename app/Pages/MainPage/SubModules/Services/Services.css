@@ -1,0 +1,8 @@
+@import 'app/root.css';
+.root{
+	padding-top: 120px;
+	padding-bottom: 40px;
+}
+.cardsContainer{
+	padding-top: 62px;
+}

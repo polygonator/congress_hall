@@ -1,0 +1,8 @@
+@import 'app/root.css';
+
+.root{
+	position: relative;
+}
+.icon{
+	transition: width 0.3s ease, height 0.3s ease;
+}

@@ -1,0 +1,33 @@
+@import 'app/root.css';
+
+.root{
+	background: url('../../../../shared/images/configurator.png')  no-repeat;
+	padding: 65px 0;
+	margin-bottom: 100px;
+}
+.content{
+	display: flex;
+	width: 1160px;
+	margin: 0 auto;
+	justify-content: space-between;
+	align-items: center;
+}
+.title{
+	text: var(--openSans-title42) var(--white);
+	text-transform: uppercase;
+	margin: 0;
+}
+.text{
+	text: var(--openSans-title16) var(--white);
+	margin: 0;
+}
+.createEvent{
+	margin: 0;
+	display: block;
+	background: transparent;
+	width: 280px;
+	height: 65px;
+	border: solid 3px  var(--white);
+	text: var(--notoSans-title16) var(--white);
+	text-transform: uppercase;
+}

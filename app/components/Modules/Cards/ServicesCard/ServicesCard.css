@@ -1,0 +1,18 @@
+@import 'app/root.css';
+
+.root{
+	margin-right: 83px;
+	&:last-child{
+		margin-right: 0;
+	}
+}
+.image{
+	display: block;
+	margin: 0 auto;
+}
+.text{
+	text-align: center;
+	text:var(--openSans-title14) var(--light-gray);
+	letter-spacing: 0.02em;
+	margin-top: 25px;
+}
