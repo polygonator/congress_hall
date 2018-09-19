@@ -1,10 +1,48 @@
 /* example font connection */
+
 @font-face {
-	font-family: 'brankovic';
-	src: url('fonts/brankovic.ttf') format('truetype');
-	/*src: url('fonts/brankovic.woff2') format('woff2'),*/
-	/*url('fonts/brankovic.woff') format('woff'),*/
-	/*url('fonts/brankovic.ttf') format('truetype');*/
-	font-weight: normal;
+	font-weight: 300;
 	font-style: normal;
+	font-family: 'OpenSans';
+	src: url("fonts/OpenSansLight/OpenSans-Light.eot");
+	src: url("fonts/OpenSansLight/OpenSans-Light.eot?#iefix")format('embedded-opentype'),
+	url("fonts/OpenSansLight/OpenSans-Light.woff2") format("woff2"),
+	url("fonts/OpenSansLight/OpenSans-Light.woff") format("woff"),
+	url("fonts/OpenSansLight/OpenSans-Light.ttf") format("truetype");
 }
+
+
+@font-face {
+	font-weight: 400;
+	font-style: normal;
+	font-family: 'OpenSans';
+	src: url("fonts/OpenSansRegular/OpenSans-Regular.eot");
+	src: url("fonts/OpenSansRegular/OpenSans-Regular.eot?#iefix")format('embedded-opentype'),
+	url("fonts/OpenSansRegular/OpenSans-Regular.woff2") format("woff2"),
+	url("fonts/OpenSansRegular/OpenSans-Regular.woff") format("woff"),
+	url("fonts/OpenSansRegular/OpenSans-Regular.ttf") format("truetype");
+}
+
+
+@font-face {
+	font-weight: 700;
+	font-style: normal;
+	font-family: 'OpenSans';
+	src: url("fonts/OpenSansBold/OpenSans-Bold.eot");
+	src: url("fonts/OpenSansBold/OpenSans-Bold.eot?#iefix")format('embedded-opentype'),
+	url("fonts/OpenSansBold/OpenSans-Bold.woff2") format("woff2"),
+	url("fonts/OpenSansBold/OpenSans-Bold.woff") format("woff"),
+	url("fonts/OpenSansBold/OpenSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+	font-weight: 700;
+	font-style: normal;
+	font-family: 'NotoSans';
+	src: url("fonts/NotoSansBold/NotoSans-Bold.eot");
+	src: url("fonts/NotoSansBold/NotoSans-Bold.eot?#iefix")format('embedded-opentype'),
+	url("fonts/NotoSansBold/NotoSans-Bold.woff2") format("woff2"),
+	url("fonts/NotoSansBold/NotoSans-Bold.woff") format("woff"),
+	url("fonts/NotoSansBold/NotoSans-Bold.ttf") format("truetype");
+}
+

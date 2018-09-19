@@ -14,7 +14,7 @@
 
 .code {
 	position: relative;
-	text: var(--mainColor) 900 center 600px 538px;
+	text: 900 center 600px 538px;
 	margin: 0;
 }
 
