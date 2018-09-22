@@ -36,6 +36,11 @@ const Sportlights = props => (
 	</svg>
 );
 
+const ChevronDown = props => (
+	<svg width="16" height="7" viewBox="0 0 16 7" xmlns="http://www.w3.org/2000/svg" {...props}>
+		<path d="M1 0l7 7m7-7L8 7" stroke="#828895" fill="none"/>
+	</svg>
+);
 class Icons extends PureComponent {
 	static propTypes = {
 		type: T.string
@@ -53,7 +58,8 @@ class Icons extends PureComponent {
 			collaboration: <Collaboration {...others}/>,
 			itinerary: <Itinerary {...others}/>,
 			speaker: <Speaker {...others}/>,
-			sportlight: <Sportlights {...others}/>
+			sportlight: <Sportlights {...others}/>,
+			chevronDown: <ChevronDown {...others}/>
 		});
 	}
 }

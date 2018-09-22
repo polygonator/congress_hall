@@ -91,7 +91,7 @@ class ContactUs extends PureComponent {
 		const {subscribe, personal_data} = this.state;
 		return (
 			<section className={styles.root}>
-				<CongressHall title={data.title} desc={data.desc}/>
+				<CongressHall title={data.title} desc={data.desc} className={styles.congress}/>
 				<Container block>
 					<form className={styles.form} onSubmit={this.handleSubmit}>
 						{this.fields.map(this.renderField)}

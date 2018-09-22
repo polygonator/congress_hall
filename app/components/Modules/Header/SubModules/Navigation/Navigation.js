@@ -35,7 +35,7 @@ class Navigation extends PureComponent {
 						);
 					})}
 				</div>
-				<Logo typeIcon={icon}/>
+				<Logo typeIcon={icon} className={styles.logo}/>
 				<div className={styles.nav_right}>
 					{takeRight(mainNavigation, 2).map(({url, title}) => {
 						return (

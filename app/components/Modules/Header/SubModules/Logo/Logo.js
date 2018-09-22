@@ -21,10 +21,9 @@ class Logo extends PureComponent {
 	render() {
 		const {className, onMainPage, typeIcon} = this.props;
 		return (
-			<div className={styles.root}>
+			<div className={cx(styles.root, {[className]: className})}>
 				<Link
 					to="/"
-					className={className}
 					activeClassName={styles.active}
 				>
 					<Icons type={typeIcon} className={cx(styles.icon, {[styles.on_main_page]: onMainPage})}/>

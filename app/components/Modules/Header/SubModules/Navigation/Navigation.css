@@ -6,15 +6,30 @@
 	justify-content: space-between;
 }
 .nav_left{
-	padding-top: 42px;
+	padding-top: 37px;
 	a{
 		margin-right: 138px;
 	}
+
+	@media (--BP3-only) {
+		a{
+			margin-right: 78px;
+		}
+	}
+}
+.logo{
+	padding-top: 5px;
 }
 .nav_right{
-	padding-top: 42px;
+	padding-top: 37px;
 	a{
 		margin-left: 170px;
+	}
+
+	@media (--BP3-only) {
+		a{
+			margin-left: 78px;
+		}
 	}
 
 }

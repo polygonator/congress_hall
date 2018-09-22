@@ -1,0 +1,6 @@
+{
+  "name": "TitleSection",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./TitleSection.js"
+}

@@ -1,0 +1,65 @@
+@import 'app/root.css';
+
+.root{
+	background: url('../../../../shared/images/Background_pc.png') no-repeat;
+	height: 100%;
+	padding-bottom: 213px;
+	position: relative;
+}
+.titleBlock{
+	width: 765px;
+	margin: 0 auto;
+	padding-top: 375px;
+}
+.title{
+	text-align: center;
+	text: var(--openSans-title60) var(--white);
+	text-transform: uppercase;
+	margin-bottom: 34px;
+}
+.creativeEvent{
+	margin: 0 auto;
+	display: block;
+	background: transparent;
+	width: 280px;
+	height: 65px;
+	border: solid 3px  var(--white);
+	text: var(--notoSans-title16) var(--white);
+	text-transform: uppercase;
+}
+.buttonContainer{
+	width: 450px;
+	margin: 268px  auto 0;
+	display: flex;
+	justify-content: space-between;
+
+	@media (--BP3-only) {
+		margin-top: 228px;
+	}
+}
+.buttonLang{
+	display: block;
+	background: transparent;
+	text: var(--openSans-title12) var(--white);
+	text-transform: uppercase;
+	border: none;
+	padding: 0;
+	width: 40px;
+	height: 25px;
+
+}
+.scrollButton{
+	cursor: pointer;
+	size: 52px;
+	border-radius: 50%;
+	border: solid 1px var(--white);
+	padding: 0;
+	margin: 0;
+	display: block;
+	position: absolute * * 80px 50%;
+	transform: translateX(-50%);
+
+svg  path {
+	stroke: var(--white);
+}
+}

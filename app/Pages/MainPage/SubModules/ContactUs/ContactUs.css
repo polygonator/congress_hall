@@ -1,22 +1,41 @@
 @import 'app/root.css';
 
 .root{
-
+	.congress{
+		padding-bottom: 15px;
+	}
 }
 .form{
 	display: flex;
 	flex-wrap: wrap;
 }
 .name, .email, .phone{
-	width: 360px;
-	margin-right: 20px;
+	width: 366px;
+	margin-right: 18px;
 	position: relative;
+
+	@media (--BP3-only) {
+		width: 300px;
+		margin-right: 20px;
+	}
+
+	@media (--BP4-only) {
+		width: 360px;
+		margin-right: 17px;
+	}
 }
 .email{
 
 }
 .phone{
 	margin-right: 0;
+
+	@media (--BP3-only) {
+		margin-right: 0;
+	}
+	@media (--BP4-only) {
+		margin-right: 0;
+	}
 }
 .message{
 	width: 100%;
@@ -27,7 +46,6 @@
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
-	padding-bottom: 120px;
 }
 .checkboxLabel{
 	position: relative;
@@ -72,7 +90,7 @@
 	letter-spacing: 0.02em;
 	position: relative;
 	display: block;
-	padding-left: 30px;
+	padding-left: 60px;
 }
 .submit{
 	display: block;
@@ -80,6 +98,7 @@
 	width: 280px;
 	height: 65px;
 	border: solid 3px  var(--gold);
+	font-family: var(--notoSans);
 	text: var(--notoSans-title16) var(--gold);
 	text-transform: uppercase;
 	margin-top: 24px;

@@ -1,9 +1,13 @@
 @import 'app/root.css';
 
 .root{
-	margin-right: 83px;
+	margin-right: 75px;
 	&:last-child{
 		margin-right: 0;
+	}
+
+	@media (--BP3-only) {
+		margin-right:40px;
 	}
 }
 .image{
@@ -14,5 +18,5 @@
 	text-align: center;
 	text:var(--openSans-title14) var(--light-gray);
 	letter-spacing: 0.02em;
-	margin-top: 25px;
+	margin-top: 31px;
 }

@@ -1,11 +1,10 @@
-/* example font connection */
 
 @font-face {
 	font-weight: 300;
 	font-style: normal;
 	font-family: 'OpenSans';
 	src: url("fonts/OpenSansLight/OpenSans-Light.eot");
-	src: url("fonts/OpenSansLight/OpenSans-Light.eot?#iefix")format('embedded-opentype'),
+	src: url("fonts/OpenSansLight/OpenSans-Light.eot?#iefix")format('eot'),
 	url("fonts/OpenSansLight/OpenSans-Light.woff2") format("woff2"),
 	url("fonts/OpenSansLight/OpenSans-Light.woff") format("woff"),
 	url("fonts/OpenSansLight/OpenSans-Light.ttf") format("truetype");

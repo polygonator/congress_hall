@@ -3,9 +3,10 @@
 .root{
 	size: 100% *;
 	position: absolute * * 0 *;
+	padding-bottom: 50px;
 }
 .footer{
-	padding-top: 50px;
+	padding-top: 65px;
 	border-top: solid 1px var(--shadyLady);
 }
 .navigation{
@@ -17,7 +18,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-top: 30px;
+	margin-top: 41px;
 }
 .creditText{
 	display: block;

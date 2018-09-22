@@ -1,5 +1,10 @@
 @import 'app/root.css';
 
 .root{
-	padding-top: 120px;
+	padding-top: 99px;
+
+	.congress{
+		padding-bottom: 91px;
+	}
 }
+

@@ -36,7 +36,7 @@ class Services extends PureComponent {
 	render() {
 		return (
 			<section className={styles.root}>
-				<CongressHall title={data.title} desc={data.desc}/>
+				<CongressHall title={data.title} desc={data.desc} className={styles.congress}/>
 				<Container className={styles.cardsContainer}>
 					{data.cards.map(card => (
 						<ServicesCard key={card.id} {...card}/>

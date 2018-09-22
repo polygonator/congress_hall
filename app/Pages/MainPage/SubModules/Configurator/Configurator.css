@@ -2,12 +2,10 @@
 
 .root{
 	background: url('../../../../shared/images/configurator.png')  no-repeat;
-	padding: 65px 0;
+	padding: 68px 0 70px;
 	margin-bottom: 100px;
 }
 .content{
-	display: flex;
-	width: 1160px;
 	margin: 0 auto;
 	justify-content: space-between;
 	align-items: center;

@@ -16,8 +16,8 @@
 	--BP2-max-width: 700px;
 	--BP3-max-width: 940px;
 	--BP4-max-width: 1115px;
-	--BP5-max-width: 1160px;
-	--BP6-max-width: 1160px;
+	--BP5-max-width: 1135px;
+	--BP6-max-width: 1135px;
 	/* section to define color variables */
 
 	/*UI colors*/
@@ -31,14 +31,15 @@
 	--silver: #dbdbdb;
 	--shadyLady: #cbcbcb;
 	--silver2: #858585;
+	--brown: #a67c4c;
 
 	/*texts*/
 	--openSans-title12: 400 12px 20px;
 	--openSans-title14: 400 14px 29px 0.02em;
 	--openSans-title16: 400 16px 20px ;
-	--openSans-title21: 300 21px 29px 0.02em ;
-	--openSans-title42: 300 42px normal 0.02em;
-	--openSans-title60: 300 60px 60px 0.02em;
+	--openSans-title21: 400 21px 29px 0.02em ; /*300*/
+	--openSans-title42: 400 42px normal 0.02em; /*300*/
+	--openSans-title60: 400 60px 60px 0.02em; /*300*/
 	--opensSans-title16_bold: 700 16px 29px 0.02em;
 	--openSans-title16_29: 400 16px 29px 0.02em;
 

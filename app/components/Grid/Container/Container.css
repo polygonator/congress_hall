@@ -6,6 +6,10 @@
 	width: 100%;
 	padding: * 20px;
 
+	@media (--BP3-min) {
+		padding: 0;
+	}
+
 	@media (--BP2-only) {
 		max-width: var(--BP2-max-width);
 	}
