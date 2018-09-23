@@ -10,7 +10,8 @@ import {mainNavigation} from 'app/shared/data';
 class Navigation extends PureComponent {
 	static propTypes = {
 		icon: T.string,
-		className: T.string
+		className: T.string,
+		onMainPage: T.bool.isRequired
 	};
 
 	static defaultProps = {
@@ -19,16 +20,16 @@ class Navigation extends PureComponent {
 	};
 
 	render() {
-		const {icon, className} = this.props;
+		const {icon, className, onMainPage} = this.props;
 		return (
 			<nav className={cx(styles.root, {[className]: className})}>
-				<div className={styles.nav_left}>
+				<div className={cx(styles.nav_left)}>
 					{take(mainNavigation, 2).map(({url, title}) => {
 						return (
 							<a
 								key={url}
 								href={url}
-								className={styles.nav_item}
+								className={cx(styles.nav_item, {[styles.on_main_page]: onMainPage})}
 							>
 								{title}
 							</a>
@@ -42,7 +43,7 @@ class Navigation extends PureComponent {
 							<a
 								key={url}
 								href={url}
-								className={styles.nav_item}
+								className={cx(styles.nav_item, {[styles.on_main_page]: onMainPage})}
 							>
 								{title}
 							</a>

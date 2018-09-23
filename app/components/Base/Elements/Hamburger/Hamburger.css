@@ -1,0 +1,41 @@
+@import 'app/root.css';
+
+.root{
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	z-index: 11;
+	-webkit-tap-highlight-color:transparent;
+	position: absolute;
+	left: 15px;
+	top: 100px;
+
+	@media (--BP3-min) {
+		display: none;
+	}
+}
+.buttonRoot{
+	size: 20px;
+	position: relative;
+	margin: 0 auto;
+	cursor: pointer;
+
+	i{
+		display: block;
+		size: 20px 1px;
+		background: var(--white);
+		position: absolute 6px * *;
+		transform: rotate(0deg);
+		transition-property: transform, top, width, opacity;
+		transition-duration: .3s;
+		transition-timing-function: ease-in-out;
+
+		&:first-child {
+			 top: 0;
+		}
+
+		&:last-child {
+			 top: 12px;
+		}
+	}
+}

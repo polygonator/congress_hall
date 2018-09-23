@@ -1,0 +1,87 @@
+@import 'app/root.css';
+
+.root{
+	display: flex;
+	align-items: center;
+
+	@media (--BP1-only) {
+		display: block;
+	}
+
+	@media (--BP3-min) {
+		justify-content: space-between;
+	}
+}
+
+.nav_left{
+
+	a{  margin-right: 110px;  }
+
+	@media (--BP1-only) {
+		a{
+			display: block;
+			text-align: center;
+			margin: 0 0 20px 0;
+		}
+	}
+
+	@media (--BP3-min) {
+		padding-top: 37px;
+	}
+	@media (--BP3-only) {
+		a{  margin-right: 78px;  }
+	}
+
+	@media (--BP4-min) {
+		a{  margin-right: 138px;  }
+	}
+}
+
+.logo{
+	padding-top: 5px;
+	@media (--BP2-max) {
+		display: none;
+	}
+}
+
+
+
+.nav_right{
+
+	a{
+		margin-right: 111px;
+		margin-left: 0;
+
+		&:last-child{
+			 margin-right: 0;
+		 }
+	}
+
+	@media (--BP1-only) {
+		a{
+			display: block;
+			text-align: center;
+			margin: 0 0 20px 0;
+		}
+	}
+
+	@media (--BP3-min) {
+		padding-top: 37px;
+		a{  margin-right: 0;}
+
+	}
+
+	@media (--BP3-only) {
+		a{  margin-left: 78px;  }
+	}
+
+	@media (--BP4-min) {
+		a{  margin-left: 170px;  }
+	}
+}
+
+.nav_item{
+	text: var(--openSans-title16) var(--silver2);
+	text-transform: uppercase;
+	text-decoration: none;
+}

@@ -1,11 +1,12 @@
 import React, {PureComponent} from 'react';
-import cx from 'classnames';
 import partial from 'lodash/partial';
 import get from 'lodash/get';
+import omit from 'lodash/omit';
 import styles from './ContactUs.css';
 import CongressHall from 'app/components/Modules/CongressHall';
 import Input from 'app/components/Base/Elements/Input';
 import Container from 'app/components/Grid/Container';
+import {validate} from 'utils/validation';
 
 const data = {
 	title: 'СВЯЖИТЕСЬ С НАМИ',
@@ -19,7 +20,7 @@ class ContactUs extends PureComponent {
 			name: '',
 			email: '',
 			phone: '',
-			// text: '',
+			text: '',
 			errors: {name: '', email: '', phone: ''},
 			shouldClear: false,
 			subscribe: false,
@@ -49,11 +50,6 @@ class ContactUs extends PureComponent {
 		}
 	};
 
-	isFormComplete = () => {
-		const {name, email, phone} = this.state;
-		return name && email && phone;
-	};
-
 	handleOnChange = (name, value) => {
 		const {errors} = this.state;
 		this.setState({[name]: value, errors: {...errors, [name]: ''}});
@@ -61,9 +57,12 @@ class ContactUs extends PureComponent {
 
 	handleSubmit = e => {
 		e.preventDefault();
-		/* add validation */
-		/* const data = _.omit(this.state, ['errors', 'shouldClear']) */
-		/* console.log(data); */
+		const {isValid, validateErrors} = validate(this.fields, this.state); // validate
+		if (!isValid) {
+			this.setState(prevState => ({errors: {...prevState.errors, ...validateErrors}}));
+		}
+		const data = omit(this.state, ['errors', 'shouldClear']);
+		console.log(data);
 	};
 
 	renderField = field => {
@@ -88,38 +87,40 @@ class ContactUs extends PureComponent {
 	};
 
 	render() {
-		const {subscribe, personal_data} = this.state;
+		const {subscribe, personal_data, text} = this.state;
 		return (
 			<section className={styles.root}>
 				<CongressHall title={data.title} desc={data.desc} className={styles.congress}/>
 				<Container block>
 					<form className={styles.form} onSubmit={this.handleSubmit}>
 						{this.fields.map(this.renderField)}
-					</form>
-					<Input textarea className={styles.message} labelText="Сообщение"/>
-					<div className={styles.labelContainer}>
-						<div className={styles.label}>
-							<label className={cx(styles.checkboxLabel, {[styles.checked]: subscribe})}>
-								<input
-									type="checkbox"
-									value={subscribe}
-									onChange={this.handleSubscribeToggle}
-									className={styles.checkbox}
-								/>
-								<span className={styles.text}>Подписаться на рассылку последних новостей и спецпредложений</span>
-							</label>
-							<label className={cx(styles.checkboxLabel, {[styles.checked]: personal_data})}>
-								<input
-									type="checkbox"
-									value={personal_data}
-									onChange={this.handlePersonalDataToggle}
-									className={styles.checkbox}
-								/>
-								<span className={styles.text}>Согласен с обработкой персональных данных</span>
-							</label>
+						<Input textarea className={styles.message} labelText="Сообщение" id="text" values={text} onChange={partial(this.handleOnChange, 'text')}/>
+						<div className={styles.labelContainer}>
+							<div className={styles.label}>
+								<label className={styles.checkboxLabel}/* {cx(styles.checkboxLabel, {[styles.checked]: subscribe})} */>
+									<input
+										type="checkbox"
+										name="subscribe"
+										checked={subscribe}
+										onChange={this.handleSubscribeToggle}
+										className={styles.checkbox}
+									/>
+									<span className={styles.text}>Подписаться на рассылку последних новостей и спецпредложений</span>
+								</label>
+								<label className={styles.checkboxLabel}/* {cx(styles.checkboxLabel, {[styles.checked]: personal_data})} */>
+									<input
+										type="checkbox"
+										name="personal_data"
+										checked={personal_data}
+										onChange={this.handlePersonalDataToggle}
+										className={styles.checkbox}
+									/>
+									<span className={styles.text}>Согласен с обработкой персональных данных</span>
+								</label>
+							</div>
+							<button type="submit" className={styles.submit} onClick={this.handleSubmit}>Отправить</button>
 						</div>
-						<button type="submit" className={styles.submit} onClick={this.handleSubmit}>Отправить</button>
-					</div>
+					</form>
 				</Container>
 			</section>
 		);

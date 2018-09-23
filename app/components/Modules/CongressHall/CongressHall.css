@@ -1,18 +1,28 @@
 @import 'app/root.css';
+
 .root{
 	padding-bottom: 40px;
+	@media (--BP1-only) {
+		display: block;
+	}
 }
 
 .titleBlock{
 	margin-right: 16px;
 }
 .title{
-	text: var(--openSans-title60) var(--gold);
+	text: var(--openSans-title42) var(--gold);
 	line-height: normal;
 	text-transform: uppercase;
 	margin-top: 0;
-	padding-right: 60px;
 
+	@media (--BP2-only) {
+		padding-right: 35px;
+	}
+	@media (--BP3-min) {
+		text: var(--openSans-title60) var(--gold);
+		padding-right: 60px;
+	}
 }
 .textBlock{
 
@@ -22,11 +32,22 @@
 	text-transform: uppercase;
 	margin-top: 12px;
 	margin-bottom: 16px;
+
+	@media (--BP2-only) {
+		font-size: 14px;
+	}
 }
 .desc{
 	text: var(--openSans-title16_29) var(--light-gray);
 	margin-top: 12px;
-	padding-right: 30px;
+
+
+	@media (--BP2-only) {
+		font-size: 14px;
+	}
+	@media (--BP3-min) {
+		padding-right: 30px;
+	}
 }
 .knowMore{
 	text: var(--openSans-title16_29) var(--gold);

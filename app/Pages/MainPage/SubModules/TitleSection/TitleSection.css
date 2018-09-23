@@ -5,17 +5,38 @@
 	height: 100%;
 	padding-bottom: 213px;
 	position: relative;
+
+	@media (--BP2-only) {
+		height: 100vh;
+	}
 }
 .titleBlock{
-	width: 765px;
+	width: 100%;
 	margin: 0 auto;
-	padding-top: 375px;
+	padding-top: 240px;
+
+	@media (--BP3-min) {
+		width: 765px;
+		padding-top: 375px;
+	}
 }
 .title{
 	text-align: center;
-	text: var(--openSans-title60) var(--white);
+	text: var(--openSans-title36) var(--white);
 	text-transform: uppercase;
-	margin-bottom: 34px;
+	margin-bottom: 60px;
+
+
+	@media (--BP2-only) {
+		text: var(--openSans-title42);
+		line-height: 45px;
+		margin-bottom: 34px;
+	}
+
+	@media (--BP3-min) {
+		text: var(--openSans-title60);
+		margin-bottom: 34px;
+	}
 }
 .creativeEvent{
 	margin: 0 auto;
@@ -23,18 +44,38 @@
 	background: transparent;
 	width: 280px;
 	height: 65px;
-	border: solid 3px  var(--white);
-	text: var(--notoSans-title16) var(--white);
+	font-family: var(--notoSans);
+	border: solid 2px  var(--white);
+	text: var(--notoSans-title14) var(--white);
 	text-transform: uppercase;
+
+	@media (--BP2-min) {
+		text: var(--notoSans-title16);
+		border: solid 3px  var(--white);
+	}
 }
+
 .buttonContainer{
-	width: 450px;
-	margin: 268px  auto 0;
+	width: 100%;
+	padding: 0 20px;
+	margin-top: 100px;
 	display: flex;
 	justify-content: space-between;
 
+	@media (--BP2-min) {
+		width: 450px;
+		margin: 168px  auto 0;
+	}
+
+	@media (--BP2-only) {
+		margin-top: 200px;
+	}
+
 	@media (--BP3-only) {
 		margin-top: 228px;
+	}
+	@media (--BP4-min) {
+		margin-top: 268px;
 	}
 }
 .buttonLang{
@@ -56,10 +97,19 @@
 	padding: 0;
 	margin: 0;
 	display: block;
-	position: absolute * * 80px 50%;
+	position: absolute * * 35px 50%;
 	transform: translateX(-50%);
 
-svg  path {
-	stroke: var(--white);
-}
+	svg  path {
+		stroke: var(--white);
+	}
+
+	@media (--BP2-only) {
+		bottom: 50px;
+	}
+	@media (--BP3-min) {
+		bottom: 80px;
+	}
+
+
 }

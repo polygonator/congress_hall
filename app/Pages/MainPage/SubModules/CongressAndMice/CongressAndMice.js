@@ -1,7 +1,13 @@
 import React, {PureComponent} from 'react';
+import T from 'prop-types';
+import {connect} from 'react-redux';
+import {Carousel} from 'react-responsive-carousel';
 import styles from './CongressAndMice.css';
 import CongressHall from 'Modules/CongressHall';
 import Gallery from 'Modules/Gallery';
+import {mediaBPs} from 'app/shared/data';
+import attachEventListener from 'components/HOC/eventListener';
+import Container from 'app/components/Grid/Container';
 
 const data = {
 	title: 'Congress hall & MICE',
@@ -56,14 +62,41 @@ const data = {
 };
 
 class CongressAndMice extends PureComponent {
+	static propTypes = {
+		common: T.object.isRequired
+	};
+
+	state ={
+		isMobile: this.isMobileAndIsTablet
+	};
+
+	isMobileAndIsTablet = () => {
+		const {common} = this.props;
+		return __BROWSER__ ? window.matchMedia(mediaBPs.bp1).matches || window.matchMedia(mediaBPs.bp2).matches : common.isMobile || common.isTablet; // eslint-disable-line no-undef
+	};
+
+	resize = () => {
+		this.setState({isMobile: this.isMobileAndIsTablet()});
+	};
+
 	render() {
+		const {isMobile} = this.state;
 		return (
 			<section className={styles.root}>
 				<CongressHall title={data.title} subTitle={data.subTitle} desc={data.desc} knowMore className={styles.congress}/>
-				<Gallery images={data.images}/>
+				{isMobile ?
+					<Container block>
+						<Carousel showThumbs={false} showStatus={false}>
+							{data.images.map(image => (
+								<img key={image.id} src={image.url} alt=""/>
+							))}
+						</Carousel>
+					</Container>					 :
+					<Gallery images={data.images}/>
+				}
 			</section>
 		);
 	}
 }
 
-export default CongressAndMice;
+export default connect(({common}) => ({common}))(attachEventListener(CongressAndMice, 'resize'));

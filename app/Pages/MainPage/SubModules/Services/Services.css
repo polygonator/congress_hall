@@ -1,12 +1,22 @@
 @import 'app/root.css';
 .root{
-	padding-top: 100px;
-	padding-bottom: 114px;
+	padding-top: 80px;
+	padding-bottom: 80px;
 
 	.congress{
-		padding-bottom: 70px;
+		padding-bottom: 20px;
+	}
+
+	@media (--BP3-min) {
+		padding-top: 100px;
+		padding-bottom: 114px;
+		.congress{
+			padding-bottom: 70px;
+		}
 	}
 }
 .cardsContainer{
-
+	@media (--BP2-max) {
+		flex-wrap: wrap;
+	}
 }

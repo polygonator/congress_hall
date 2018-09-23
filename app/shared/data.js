@@ -3,23 +3,6 @@ export const externalLinkOptions = { // eslint-disable-line import/prefer-defaul
 	target: '_blank'
 };
 
-export const facebookShare = {
-	icon: 'facebook',
-	code: 'facebook',
-	url: '//www.facebook.com/sharer/sharer.php?u=',
-	title: 'facebook-share-dialog'
-};
-
-export const twitterShare = {
-	icon: 'twitter',
-	code: 'twitter',
-	url: '//twitter.com/share?url=',
-	custom_text: '//twitter.com/share?text=',
-	title: 'twitter-share-dialog'
-};
-
-export const shares = [facebookShare, twitterShare];
-
 /* TODO update bps when create new project */
 export const mediaBPs = {
 	bp1: 'screen and (max-width: 767px)',

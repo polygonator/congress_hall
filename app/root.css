@@ -3,6 +3,7 @@
 	--sansSerif: sans-serif;
 	--openSans: 'OpenSans', sans-serif;
 	--notoSans: 'NotoSans', sans-serif;
+	--mainColor: #000000;
 
 	/* section to define grid variables */
 
@@ -22,6 +23,7 @@
 
 	/*UI colors*/
 	--black: #000000;
+	--header-black: #343434;
 	--white: #ffffff;
 	--gold: #c69c6d;
 	--dark-gray: #474747;
@@ -38,11 +40,13 @@
 	--openSans-title14: 400 14px 29px 0.02em;
 	--openSans-title16: 400 16px 20px ;
 	--openSans-title21: 400 21px 29px 0.02em ; /*300*/
+	--openSans-title36: 400 36px 60px 0.02em ;
 	--openSans-title42: 400 42px normal 0.02em; /*300*/
 	--openSans-title60: 400 60px 60px 0.02em; /*300*/
 	--opensSans-title16_bold: 700 16px 29px 0.02em;
 	--openSans-title16_29: 400 16px 29px 0.02em;
 
+	--notoSans-title14: 700 14px 20px ;
 	--notoSans-title16: 700 16px 20px ;
 }
 

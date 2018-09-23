@@ -2,7 +2,7 @@
 
 .root {
 	input {
-		size: 100% 100px;
+		size: 100% 70px;
 		display: block;
 		padding: 19px 30px;
 		text: var(--openSans-title21) var(--gray);
@@ -16,7 +16,7 @@
 		}
 
 		@media (--BP2-min) {
-			//height: 60px;
+			height: 100px;
 			//padding: 17px 20px;
 		}
 

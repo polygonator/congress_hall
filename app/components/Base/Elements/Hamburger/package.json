@@ -1,0 +1,6 @@
+{
+  "name": "Hamburger",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./Hamburger.js"
+}

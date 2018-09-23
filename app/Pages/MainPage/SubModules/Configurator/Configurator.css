@@ -2,22 +2,42 @@
 
 .root{
 	background: url('../../../../shared/images/configurator.png')  no-repeat;
-	padding: 68px 0 70px;
-	margin-bottom: 100px;
+	padding: 35px 0 33px;
+	margin-bottom: 50px;
+
+	@media (--BP2-min) {
+		padding: 68px 0 70px;
+		margin-bottom: 100px;
+	}
 }
 .content{
 	margin: 0 auto;
 	justify-content: space-between;
 	align-items: center;
+
+	@media (--BP1-only) {
+		display: block;
+	}
 }
 .title{
 	text: var(--openSans-title42) var(--white);
 	text-transform: uppercase;
 	margin: 0;
+	@media (--BP1-only) {
+		font-size: 32px;
+		text-align: center;
+	}
+	@media (--BP2-only) {
+		font-size: 36px;
+	}
 }
 .text{
 	text: var(--openSans-title16) var(--white);
 	margin: 0;
+
+	@media (--BP2-max) {
+		display: none;
+	}
 }
 .createEvent{
 	margin: 0;
@@ -28,4 +48,8 @@
 	border: solid 3px  var(--white);
 	text: var(--notoSans-title16) var(--white);
 	text-transform: uppercase;
+
+	@media (--BP1-only) {
+		margin: 10px auto 0;
+	}
 }

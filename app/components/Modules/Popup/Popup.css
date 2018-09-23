@@ -19,8 +19,8 @@
 .popup {
 	position: relative;
 	width: 100%;
-	margin: 0 20px;
-	@media (--BP2-min) {
+	//margin: 0 20px;
+	@media (--BP3-min) {
 		width: auto;
 		margin: 0;
 	}
@@ -39,7 +39,7 @@
 	cursor: pointer;
 	touch-action: manipulation;
 	size: 40px;
-	background-image: url('app/shared/svg/deleteCross.svg');
+	background-image: url('../../../shared/svg/deleteCross.svg');
 	background-repeat: no-repeat;
 	background-position: center center;
 

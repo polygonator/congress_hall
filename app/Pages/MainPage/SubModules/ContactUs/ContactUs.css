@@ -10,10 +10,13 @@
 	flex-wrap: wrap;
 }
 .name, .email, .phone{
-	width: 366px;
-	margin-right: 18px;
+	width: 100%;
+	margin-bottom: 20px;
 	position: relative;
 
+	@media (--BP3-min) {
+		margin-bottom: 0
+	}
 	@media (--BP3-only) {
 		width: 300px;
 		margin-right: 20px;
@@ -22,6 +25,10 @@
 	@media (--BP4-only) {
 		width: 360px;
 		margin-right: 17px;
+	}
+	@media (--BP5-min) {
+		width: 366px;
+		margin-right: 18px;
 	}
 }
 .email{
@@ -33,7 +40,7 @@
 	@media (--BP3-only) {
 		margin-right: 0;
 	}
-	@media (--BP4-only) {
+	@media (--BP4-min) {
 		margin-right: 0;
 	}
 }
@@ -43,11 +50,61 @@
 	margin-top: 25px;
 }
 .labelContainer{
-	display: flex;
-	justify-content: space-between;
+	display: block;
 	width: 100%;
+
+	@media (--BP3-min) {
+		display: flex;
+		justify-content: space-between;
+	}
 }
 .checkboxLabel{
+	cursor: pointer;
+	touch-action: manipulation;
+	display: block;
+	margin-top: 20px;
+}
+.checkbox{
+	size: 0;
+	display: none;
+	&:checked {
+		&+.text:after {
+			  opacity: 1;
+		}
+	}
+}
+.text{
+	text: var(--openSans-title16) var(--gray);
+	line-height: 35px;
+	letter-spacing: 0.02em;
+	position: relative;
+	display: block;
+	padding-left: 40px;
+
+	@media (--BP3-min) {
+		padding-left: 60px;
+	}
+
+	&:before {
+		 display: inline-block;
+		 content: '';
+		 size: 23px;
+		 margin-right: 12px;
+		 border: 1px solid var(--gold);
+		 position: absolute 4px * * 0;
+	 }
+
+	&:after {
+		 content: '';
+		 opacity: 0;
+		 position: absolute 9px * * 4px;
+		 background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNi41IiBoZWlnaHQ9IjE1IiB2aWV3Qm94PSIwIDAgMTYuNSAxNSI+ICA8bWV0YWRhdGE+PD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz48eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzEzOCA3OS4xNTk4MjQsIDIwMTYvMDkvMTQtMDE6MDk6MDEgICAgICAgICI+ICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+ICAgPC9yZGY6UkRGPjwveDp4bXBtZXRhPiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPD94cGFja2V0IGVuZD0idyI/PjwvbWV0YWRhdGE+PGRlZnM+ICAgIDxzdHlsZT4gICAgICAuY2xzLTEgeyAgICAgICAgZmlsbDogI2M2OWM2ZDsgICAgICAgIGZpbGwtcnVsZTogZXZlbm9kZDsgICAgICB9ICAgIDwvc3R5bGU+ICA8L2RlZnM+ICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik00MTQuNTk0LDM1NjAuNzdhMS43NjIsMS43NjIsMCwwLDAtMi4yMzIuMzFsLTguMDc2LDkuNzctMi42ODctMy4wMWExLjc0NywxLjc0NywwLDAsMC0yLjI0Mi0uMjMsMS4zLDEuMywwLDAsMC0uMjY1LDEuOThsNS4zLDUuOTEsMTAuNTU0LTEyLjc2QTEuMzA1LDEuMzA1LDAsMCwwLDQxNC41OTQsMzU2MC43N1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zOTguNzUgLTM1NjAuNSkiLz48L3N2Zz4=);
+		 background-repeat: no-repeat;
+		 size: 17px 15px;
+		 transition: opacity .2s ease;
+	 }
+}
+/*.checkboxLabel{
 	position: relative;
 	cursor: pointer;
 	//display: inline-block;
@@ -73,6 +130,13 @@
 		 border: 1px solid var(--gold);
 		 position: absolute 27px * * 0;
 	 }
+
+	@media (--BP1-only) {
+		&:after{
+			top: -59px;
+		}
+
+	}
 }
 .checked:after {
 	opacity: 1;
@@ -90,12 +154,17 @@
 	letter-spacing: 0.02em;
 	position: relative;
 	display: block;
-	padding-left: 60px;
-}
+	padding-left: 40px;
+
+	@media (--BP3-min) {
+		padding-left: 60px;
+	}
+
+}*/
 .submit{
 	display: block;
 	background: #ffffff;
-	width: 280px;
+	width: 100%;
 	height: 65px;
 	border: solid 3px  var(--gold);
 	font-family: var(--notoSans);
@@ -103,4 +172,7 @@
 	text-transform: uppercase;
 	margin-top: 24px;
 	outline: none;
+	@media (--BP3-min) {
+		width: 280px;
+	}
 }

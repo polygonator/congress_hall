@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import styles from './Footer.css';
-import Navigation from 'app/components/Modules/Header/SubModules/Navigation';
+import Navigation from './SubModules/FooterNavigation';
 import Container from 'app/components/Grid/Container';
 
 const sitelinks = [
@@ -27,7 +27,7 @@ class Footer extends PureComponent {
 		return (
 			<footer id="footer" className={styles.root}>
 				<Container block className={styles.footer}>
-					<Navigation icon="logoGold" className={styles.navigation}/>
+					<Navigation/>
 					<div className={styles.credits}>
 						<h6 className={styles.creditText}>© ПАО Пансионат “Приморье”» все права защищены Законом РФ.</h6>
 						<div className={styles.footerLinks}>

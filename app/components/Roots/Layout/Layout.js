@@ -1,20 +1,23 @@
 import React, {Component} from 'react';
 import T from 'prop-types';
-import {provideHooks} from 'redial';
 import {connect} from 'react-redux';
 import Helmet from 'react-helmet';
+import Transition from 'react-transition-group/Transition';
 import styles from './Layout.css';
 import Header from 'Modules/Header';
 import Footer from 'Modules/Footer';
+import Popup from 'Modules/Popup';
 import {actions as commonActions} from 'reducers/common';
-import {actions as settingsActions} from 'reducers/settings';
+import {safeGet} from 'utils/safeGet';
 
 class Layout extends Component {
 	static propTypes = {
 		common: T.object.isRequired,
 		title: T.string.isRequired,
 		children: T.element.isRequired,
-		setInitScreenHeight: T.func.isRequired
+		setInitScreenHeight: T.func.isRequired,
+		location: T.object.isRequired,
+		popups: T.object.isRequired
 	};
 
 	constructor(...args) {
@@ -45,14 +48,35 @@ class Layout extends Component {
 		this.props.setInitScreenHeight(Math.min(document.documentElement.clientHeight, window.innerHeight));
 	}
 
+	handleWaitNextTick = node => {
+		return node.offsetHeight;
+	};
+
 	render() {
-		const {title, children} = this.props;
+		const {title, children, location, popups} = this.props;
 		return (
 			<div className={styles.root}>
 				<Helmet titleTemplate="%s">
 					<title>{title}</title>
 				</Helmet>
-				<Header/>
+				<Transition
+					mountOnEnter
+					unmountOnExit
+					in={popups.show}
+					timeout={{
+						enter: safeGet(popups, 'animationTimeouts.enter', 1),
+						exit: safeGet(popups, 'animationTimeouts.exit', 1)
+					}}
+					onEnter={this.handleWaitNextTick}
+				>
+					{status => (
+						<Popup
+							location={location}
+							status={status}
+						/>
+					)}
+				</Transition>
+				<Header location={location}/>
 				{children}
 				<Footer/>
 			</div>
@@ -60,8 +84,9 @@ class Layout extends Component {
 	}
 }
 
-const mapStateToProps = ({common}) => ({
+const mapStateToProps = ({common, popups}) => ({
 	common,
+	popups,
 	title: 'default title' // get title from state, for example from settings
 });
 
@@ -69,8 +94,4 @@ const mapDispatchToProps = dispatch => ({
 	setInitScreenHeight: height => dispatch(commonActions.setInitScreenHeight(height))
 });
 
-export default provideHooks({
-	fetch: ({dispatch}) => Promise.all([
-		dispatch(settingsActions.fetch())
-	])
-})(connect(mapStateToProps, mapDispatchToProps)(Layout));
+export default connect(mapStateToProps, mapDispatchToProps)(Layout);

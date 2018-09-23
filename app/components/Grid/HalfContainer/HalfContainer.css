@@ -2,9 +2,14 @@
 
 .root {
 	display: flex;
-	width: 50%;
-	max-width: 50%;
-	flex: 0 0 50%;
+	width: 100%;
+	max-width: 100%;
+	flex: 0 0 100%;
+	@media (--BP2-min) {
+		width: 50%;
+		max-width: 50%;
+		flex: 0 0 50%;
+	}
 }
 
 .pureHalf {

@@ -16,6 +16,9 @@
 			margin-right: 78px;
 		}
 	}
+	@media (--BP2-max) {
+		display: none;
+	}
 }
 .logo{
 	padding-top: 5px;
@@ -31,10 +34,17 @@
 			margin-left: 78px;
 		}
 	}
+	@media (--BP2-max) {
+		display: none;
+	}
 
 }
 .nav_item{
-	text: var(--openSans-title16) var(--white);
+	text: var(--openSans-title16) var(--header-black);
 	text-transform: uppercase;
 	text-decoration: none;
+
+	.on_main_page& {
+		color: var(--white)
+	}
 }

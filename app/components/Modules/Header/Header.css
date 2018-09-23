@@ -9,9 +9,10 @@
 	transition: padding-top 0.3s ease, transform 0.5s ease, position 0.5s ease;
 	padding-top: 75px;
 
-	@media (--BP3-only) {
+	@media (--BP3-max) {
 		padding-top: 55px;
 	}
+
 }
 .wrapper{
 

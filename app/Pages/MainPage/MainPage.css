@@ -2,5 +2,13 @@
 
 .root {
 	height: 100%;
-	padding-bottom: 384px;
+	padding-bottom: 480px;
+
+	@media (--BP2-only) {
+		padding-bottom: 320px;
+	}
+
+	@media (--BP3-min) {
+		padding-bottom: 384px;
+	}
 }

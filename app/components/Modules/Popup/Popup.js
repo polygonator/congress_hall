@@ -5,6 +5,7 @@ import get from 'lodash/get';
 import match from 'switch-match';
 import cx from 'classnames';
 import styles from './Popup.css';
+import MenuPopup from './Popups/MenuPopup';
 import VerticalAlignContainer from 'Grid/VerticalAlignContainer';
 import {getScrollTop, overflowY} from 'utils/dom';
 import {isEntered, isExited} from 'utils/transition';
@@ -123,8 +124,9 @@ class Popup extends PureComponent {
 			>
 				<div className={popupClasses} id="popup">
 					{match(popup, {
-						// next row just as example
-						// somePopup: () => <SomePopupComponent {...popupOptions}/>
+						menuPopup: () => (
+							<MenuPopup {...popupOptions}/>
+						)
 					}, null)}
 					{hideCloseButton ? null : <button type="button" className={styles.close} onClick={this.handleOnClose}/>}
 				</div>
