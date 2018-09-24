@@ -1,0 +1,114 @@
+@import 'app/root.css';
+
+.root{
+	height: 100%;
+	padding-bottom: 480px;
+	padding-top: 197px;
+
+	.congress{
+		padding-bottom: 7px;
+	}
+
+	@media (--BP2-only) {
+		padding-bottom: 270px;
+		padding-top: 197px;
+	}
+
+	@media (--BP3-only) {
+		padding-bottom: 340px;
+		padding-top: 197px;
+	}
+
+	@media (--BP4-min) {
+		padding-bottom: 400px;
+		padding-top: 237px;
+	}
+	h3{
+		line-height: normal;
+	}
+}
+
+.map{  }
+
+.contacts{
+	margin-top: 90px;
+	border: solid 2px var(--gold);
+	padding: 20px;
+	align-items: center;
+
+	@media (--BP1-only) {
+		display: block;
+	}
+
+	@media (--BP3-min) {
+		padding: 35px;
+	}
+}
+.address{
+	margin-bottom: 20px;
+
+	@media (--BP2-min) {  margin-bottom: 0p;  }
+	@media (--BP2-only) {  margin-right: 40px;  }
+
+	@media (--BP3-min) {  width: 435px;  }
+	@media (--BP3-only) {  margin-right: 20px;  }
+
+	@media (--BP4-only) {  margin-right: 120px;  }
+	@media (--BP5-min) {  margin-right: 160px;  }
+}
+.title{
+	text: var(--opensSans-title16_bold) var(--gray);
+	text-transform: uppercase;
+	margin: 0;
+}
+.text{
+	text: var(--openSans-title16_29) var(--gray);
+	margin: 0;
+}
+.additionally{
+
+}
+.cards{
+	display: block;
+	@media (--BP2-min) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+.card{
+	margin-bottom:20px;
+
+	@media (--BP2-only) {
+		margin-right: 20px;
+		margin-bottom:40px;
+		&:nth-child(2n){
+			margin-right: 0;
+		}
+	}
+
+	@media (--BP3-min) {
+		&:nth-child(3){
+			margin-right: 0;
+		}
+	}
+	@media (--BP3-only) {
+		margin-right: 26px;
+	}
+	@media (--BP4-min) {
+		margin-right: 54px;
+		margin-bottom:40px;
+		&:nth-child(n+4)&:nth-child(-n+5){
+			margin-bottom: 0;
+		}
+
+	}
+}
+.titleCard{
+	text: var(--openSans-title16_29) var(--gray);
+	text-transform: uppercase;
+	margin: 0;
+}
+.textCard{
+	text: var(--openSans-title16_29) var(--gold);
+	margin: 0;
+}
