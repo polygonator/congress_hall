@@ -1,17 +1,19 @@
 import React, {PureComponent} from 'react';
 import T from 'prop-types';
+import cx from 'classnames';
 import styles from './Hamburger.css';
 
 class Hamburger extends PureComponent {
 	static propTypes = {
-		toggleMenu: T.func.isRequired
+		toggleMenu: T.func.isRequired,
+		onMainPage: T.bool.isRequired
 	};
 
 	render() {
-		const {toggleMenu} = this.props;
+		const {toggleMenu, onMainPage} = this.props;
 		return (
 			<div
-				className={styles.root}
+				className={cx(styles.root, {[styles.on_main_page]: onMainPage})}
 				onClick={toggleMenu}
 			>
 				<button

@@ -8,9 +8,17 @@
 	z-index: 10;
 	transition: padding-top 0.3s ease, transform 0.5s ease, position 0.5s ease;
 	padding-top: 75px;
+	padding-bottom: 78px;
+	border-bottom: solid 1px #cccccc;
 
 	@media (--BP3-max) {
 		padding-top: 55px;
+		padding-bottom: 58px;
+	}
+
+	.on_main_page& {
+		padding-bottom: 0;
+		border-bottom: none;
 	}
 
 }

@@ -13,6 +13,11 @@
 	@media (--BP3-min) {
 		display: none;
 	}
+	.on_main_page& {
+		i{
+			background: var(--white);
+		}
+	}
 }
 .buttonRoot{
 	size: 20px;
@@ -23,7 +28,7 @@
 	i{
 		display: block;
 		size: 20px 1px;
-		background: var(--white);
+		background: var(--header-black);
 		position: absolute 6px * *;
 		transform: rotate(0deg);
 		transition-property: transform, top, width, opacity;

@@ -1,0 +1,42 @@
+@import 'app/root.css';
+
+.root{
+	padding-bottom: 60px;
+
+	@media (--BP2-min) {
+		padding-bottom: 120px;
+	}
+}
+.image_wrapp{
+	size: 100%;
+}
+
+.image{
+	size: 100%;
+}
+.title_block{
+	display: block;
+	margin-top: 42px;
+	@media (--BP2-min) {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+.title{
+	text: var(--opensSans-title16_bold) var(--gray);
+	text-transform: uppercase;
+	margin: 0;
+}
+.date{
+	text: var(--openSans-title16_29) var(--gold);
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.desc_block{
+
+}
+.desc{
+	text: var(--openSans-title16_29) var(--gray);
+	margin-bottom: 0;
+}

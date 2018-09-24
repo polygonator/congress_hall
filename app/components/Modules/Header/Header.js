@@ -25,7 +25,7 @@ class Header extends PureComponent {
 		return (
 			<header id="header" className={rootStyles}>
 				<div className={styles.wrapper}>
-					<Hamburger toggleMenu={showMenuPopup}/>
+					<Hamburger toggleMenu={showMenuPopup} onMainPage={onMainPage}/>
 					<Navigation icon={logoColor} onMainPage={onMainPage}/>
 				</div>
 			</header>
